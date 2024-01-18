@@ -7,10 +7,10 @@ import java.util.Stack;
 import java.util.function.BinaryOperator;
 
 public class Calculator {
-    BinaryOperator<Double> add = Double::sum;
-    BinaryOperator<Double> sub = (a, b) -> a - b;
-    BinaryOperator<Double> mult = (a, b) -> a * b;
-    BinaryOperator<Double> div = (a, b) -> a / b;
+    public BinaryOperator<Double> add = Double::sum;
+    public BinaryOperator<Double> sub = (a, b) -> a - b;
+    public BinaryOperator<Double> mult = (a, b) -> a * b;
+    public BinaryOperator<Double> div = (a, b) -> a / b;
 
     public double calculate(String expression) {
         var inputExpression = new ArrayList<>(Arrays.asList(expression.split(" ")));

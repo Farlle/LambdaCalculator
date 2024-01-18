@@ -1,6 +1,6 @@
 package com.company.main;
-import com.company.calculator.Calculator;
 
+import com.company.calculator.Calculator;
 
 public class Main {
     public static void main(String[] args) {
