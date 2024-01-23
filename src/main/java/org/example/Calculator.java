@@ -1,4 +1,4 @@
-package com.company.calculator;
+package org.example;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -10,7 +10,13 @@ public class Calculator {
     public BinaryOperator<Double> add = Double::sum;
     public BinaryOperator<Double> sub = (a, b) -> a - b;
     public BinaryOperator<Double> mult = (a, b) -> a * b;
-    public BinaryOperator<Double> div = (a, b) -> a / b;
+    public BinaryOperator<Double> div = (a, b) -> {
+        if(b==0){
+            throw new ArithmeticException("Divide by zero exception");
+        }
+        return    a / b;
+    };
+
 
     public double calculate(String expression) {
         var inputExpression = new ArrayList<>(Arrays.asList(expression.split(" ")));
